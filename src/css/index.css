@@ -1,0 +1,178 @@
+:root {
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  line-height: 1.5;
+  /* font-weight: 400; */
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /*background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Bootstrap focus ring custom property (affects .focus-ring utility) */
+  --bs-focus-ring-color: rgba(33, 253, 13, 0.116) !important;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* App layout with fixed sidebar */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  margin-left: 15vw;
+  min-width: calc(100vw - 15vw);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.5); /* 50% opaque white background */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 200px;
+    min-width: calc(100vw - 200px);
+  }
+}
+
+/*
+  Momo Trust Display
+  - Place the font files in `src/assets/fonts/` with the names below (recommended):
+    - MomoTrustDisplay.woff2
+    - MomoTrustDisplay.woff
+  If you host the font elsewhere (CDN or Google Fonts), replace the `src:` URLs accordingly.
+*/
+@font-face {
+  font-family: 'Momo Trust Display';
+  /* prefer modern compressed formats if present, fall back to the included TTF */
+  src: local('MomoTrustDisplay-Regular'),
+       url('../assets/fonts/MomoTrustDisplay.woff2') format('woff2'),
+       url('../assets/fonts/MomoTrustDisplay.woff') format('woff'),
+       url('../assets/fonts/MomoTrustDisplay-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Figtree (local static files shipped in the repo) */
+@font-face {
+  font-family: 'Figtree';
+  src: local('Figtree'),
+       url('../assets/fonts/Figtree/static/Figtree-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/*button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}*/
+
+body, #root {
+  background-image: url('../img/bg_4.jpg');
+  background-repeat: repeat;
+  background-size: 300px;
+  /* min-height: 100vh; */
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+h1 {
+   font-family: 'Momo Trust Display', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h2 {
+  font-size: large;
+  color: #609210;
+  font-variant-caps: all-small-caps;
+  padding-bottom: 10px;
+}
+
+p {
+  font-family: 'Figtree', 'Helvetica Neue', Arial, sans-serif;
+}

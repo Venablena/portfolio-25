@@ -1,0 +1,56 @@
+/* Scoped header styles for the Header component */
+.app-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15vw;
+  min-width: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(0, 0, 0);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* Make the header content match the accordion width */
+.app-header-inner {
+  text-align: center;
+}
+
+.app-header h1 {
+  color: rgba(255, 255, 255);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: rgba(255, 255, 255);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Skills flex layout */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.skills-list .skill {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.skills-list .skill:not(:last-child)::after {
+  content: " \2022"; /* bullet dot */
+  margin: 0 0.5rem;
+  opacity: 0.8;
+}
