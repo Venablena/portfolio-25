@@ -61,3 +61,35 @@
   font-size: 0.95rem;
   line-height: 1.35;
 }
+
+@media (max-width: 768px) {
+  .carousel-frame {
+    flex-direction: column !important;
+  }
+
+  .carousel-image {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .carousel-caption.side {
+    flex: none !important;
+    width: 100% !important;
+    min-width: unset;
+  }
+
+  .page-continuous-layout {
+    flex-direction: column;
+  }
+
+  .page-continuous-layout .images-column {
+    max-width: 100%;
+  }
+
+  .page-continuous-layout .caption-column {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+    position: static;
+  }
+}

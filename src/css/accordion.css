@@ -50,6 +50,48 @@
   /* box-shadow: inset 0 -3px 0 #609210; */
 }
 
+@media (max-width: 768px) {
+  /* Hidden by default — revealed as a vertical overlay when .open is added */
+  .portfolio-navbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 63px; /* flush with bottom of mobile header */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 99;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .portfolio-navbar.open {
+    display: flex;
+  }
+
+  .portfolio-navbar .nav-item {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    height: auto;
+    color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .portfolio-navbar .nav-item:hover {
+    color: #88cd19;
+    font-size: 1rem; /* suppress desktop hover size jump */
+  }
+
+  .portfolio-navbar .nav-item.active {
+    color: #88cd19;
+  }
+}
+
 /* Content display area */
 .content-display {
   position: relative;
@@ -62,8 +104,40 @@
   display: none;
   padding: 2rem;
   width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    padding: 1rem;
+  }
 }
 
 .content-section.active {
   display: block !important;
+}
+
+.about-content {
+  max-width: 1200px;
+}
+
+/* Skills block inside About — desktop: hidden; mobile: visible */
+.about-skills-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .about-skills-mobile {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  .about-skills-mobile .skills-list {
+    justify-content: flex-start;
+    color: #333;
+  }
+
+  .about-skills-mobile .skill {
+    color: #333;
+  }
 }

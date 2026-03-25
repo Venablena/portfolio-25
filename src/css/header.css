@@ -16,25 +16,27 @@
 /* Make the header content match the accordion width */
 .app-header-inner {
   text-align: center;
+  color: rgba(255, 255, 255);
 }
 
 .app-header h1 {
   color: rgba(255, 255, 255);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.app-header p {
-  margin: 0;
-  color: rgba(255, 255, 255);
-  font-weight: 700;
-  font-size: 0.85rem;
+.app-header h2 {
+  color: #609210;
+  font-weight: 600;
 }
 
-/* Skills flex layout */
+/* Hamburger button — hidden on desktop */
+.hamburger-btn {
+  display: none;
+}
+
+/* Skills flex layout — kept for skills-page content area */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -53,4 +55,61 @@
   content: " \2022"; /* bullet dot */
   margin: 0 0.5rem;
   opacity: 0.8;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .app-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-y: visible;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+
+  .app-header-inner {
+    text-align: center;
+  }
+
+  .app-header h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .app-header h2 {
+    font-size: 0.7rem;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-variant-caps: normal;
+  }
+
+  /* Hide sidebar skills on mobile — they appear in About content instead */
+  .skills-sidebar {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+  }
 }

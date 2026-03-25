@@ -32,16 +32,23 @@
 
 .main-content {
   margin-left: 15vw;
-  min-width: calc(100vw - 15vw);
+  width: calc(100vw - 15vw);
+  max-width: 1680px;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.5); /* 50% opaque white background */
+  background: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
   .main-content {
-    margin-left: 200px;
-    min-width: calc(100vw - 200px);
+    margin-left: 0;
+    min-width: 100vw;
+    width: 100%;
+    padding-top: 80px;
   }
 }
 
@@ -120,34 +127,12 @@ body {
   min-height: 100vh;
 }
 
-/*button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}*/
-
 body, #root {
   background-image: url('../img/bg_4.jpg');
   background-repeat: repeat;
   background-size: 300px;
   /* min-height: 100vh; */
 }
-
 
 .logo {
   height: 6em;

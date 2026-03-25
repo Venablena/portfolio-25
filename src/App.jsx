@@ -49,7 +49,18 @@ function App() {
     { src: content.visual.tech, alt: 'Tech Visual Design' },
   ];
 
-    const navItems = [
+  const navItems = [
+    { id: 'About', title: 'About', Component: () => (
+      <div className="about-content">
+        <p>{captions.about}</p>
+        <div className="about-skills-mobile">
+          <h2>Skills</h2>
+          <div className="skills-list">
+            {skills.map((skill, i) => <p key={i} className="skill">{skill}</p>)}
+          </div>
+        </div>
+      </div>
+    )},
     { id: 'Microsoft', title: 'Microsoft', Component: () => <Page images={microsoftImages} captions={captions.microsoft} isContinuous={true} /> },
     { id: 'IntelWearable', title: 'Intel Wearable', Component: () => <Page images={basisImages} captions={captions.basis} isContinuous={true} /> },
     { id: 'IntelApp', title: 'Intel App', Component: () => <Page images={basisAppImages} captions={captions.basisApp} isContinuous={true} /> },
@@ -59,31 +70,34 @@ function App() {
     { id: 'visual', title: 'Visual Design', Component: () => <Page images={visualImages} captions={captions.visual} /> },
   ];
 
-  const [activeId, setActiveId] = useState(navItems[0].id);
+  const [activeId, setActiveId] = useState(navItems[2].id);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  const handleNavSelect = (id) => {
+    setActiveId(id);
+    setIsMobileNavOpen(false);
+  };
 
   return (
     <div className="app-layout">
-      <Header skills={skills} setActiveId={setActiveId} />
+      <Header
+        skills={skills}
+        isMobileNavOpen={isMobileNavOpen}
+        onHamburgerToggle={() => setIsMobileNavOpen(open => !open)}
+      />
       <div className="main-content">
-        <nav className="portfolio-navbar">
+        <nav className={`portfolio-navbar${isMobileNavOpen ? ' open' : ''}`}>
           {navItems.map(({ id, title }) => (
             <button
               key={id}
               className={`nav-item ${activeId === id ? 'active' : ''}`}
-              onClick={() => setActiveId(id)}
+              onClick={() => handleNavSelect(id)}
             >
               {title}
             </button>
           ))}
         </nav>
         <div className="content-display">
-          {activeId === 'About' && (
-            <div className="content-section active">
-              <div className="about-content">
-                <p>{captions.about}</p>
-              </div>
-            </div>
-          )}
           {navItems.map(({ id, Component }) => (
             <div key={id} className={`content-section ${activeId === id ? 'active' : ''}`}>
               <Component />
