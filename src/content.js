@@ -65,7 +65,7 @@ export const microsoft = {
 };
 
 export const captions = {
-    about: "I’m a designer, artist, educator, and web developer. I’m passionate about making technology approachable and usable. I own the full product cycle: from concept and design to testing and deployment.",
+    about: "I’m a designer, artist, educator, and a fullstack web developer. I’m passionate about making technology approachable and usable. I own the full product cycle: from concept and design to testing and deployment.",
     atma: [{
         header: "Role: Designer and web developer",
         content: "Atma Connect is a community impact platform. I created a visually coherent design system across all screens and implemented it on their responsive website, easilymaintained through a CMS."
@@ -113,6 +113,7 @@ export const captions = {
         header: "Keep it relevant",
         content: "I was part of the team designing a new generation wearable device and its companion mobile app. The entire app architecture was revised and new features developed based on competition analysis and customer feedback. In addition to feature development, I researched market trends and updated user documentation"
     }],
+    ps: "PS: I built this site from scratch using AI. Easy breezy.",
     zen: [{
         header: "Role: UX researcher and designer",
         content: "I planned and executed a usability study of the San Francisco Zen center website that had grown overly complex due to haphazardly added services across multiple content management platforms."

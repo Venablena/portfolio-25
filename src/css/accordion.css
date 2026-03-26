@@ -152,6 +152,27 @@
   color: white;
 }
 
+.about-ps {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.about-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.about-social a {
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.about-social a:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   .about-page {
     flex-direction: column;

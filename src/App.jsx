@@ -51,7 +51,7 @@ function App() {
   ];
 
   const navItems = [
-    { id: 'About', title: 'About', Component: () => <About text={captions.about} skills={skills} /> },
+    { id: 'About', title: 'About', Component: () => <About text={captions.about} ps={captions.ps} skills={skills} /> },
     { id: 'Microsoft', title: 'Microsoft', Component: () => <Page images={microsoftImages} captions={captions.microsoft} isContinuous={true} /> },
     { id: 'IntelWearable', title: 'Intel Wearable', Component: () => <Page images={basisImages} captions={captions.basis} isContinuous={true} /> },
     { id: 'IntelApp', title: 'Intel App', Component: () => <Page images={basisAppImages} captions={captions.basisApp} isContinuous={true} /> },
