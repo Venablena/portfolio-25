@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Page from './Page';
 import * as content from './content';
-import Header from './Header'
+import Header from './Header';
+import About from './About';
 
 function App() {
 
@@ -50,17 +51,7 @@ function App() {
   ];
 
   const navItems = [
-    { id: 'About', title: 'About', Component: () => (
-      <div className="about-content">
-        <p>{captions.about}</p>
-        <div className="about-skills-mobile">
-          <h2>Skills</h2>
-          <div className="skills-list">
-            {skills.map((skill, i) => <p key={i} className="skill">{skill}</p>)}
-          </div>
-        </div>
-      </div>
-    )},
+    { id: 'About', title: 'About', Component: () => <About text={captions.about} skills={skills} /> },
     { id: 'Microsoft', title: 'Microsoft', Component: () => <Page images={microsoftImages} captions={captions.microsoft} isContinuous={true} /> },
     { id: 'IntelWearable', title: 'Intel Wearable', Component: () => <Page images={basisImages} captions={captions.basis} isContinuous={true} /> },
     { id: 'IntelApp', title: 'Intel App', Component: () => <Page images={basisAppImages} captions={captions.basisApp} isContinuous={true} /> },

@@ -1,15 +1,28 @@
-function About() {
+import PropTypes from 'prop-types';
+import windyPortrait from './img/windy_portrait.jpg';
+
+function About({ text, skills }) {
   return (
-    <div>
-      <p>
-        I love making the web easier to use and more beautiful.
-        I have solid industry experience in both start-ups and international corporations.
-        I’m the front-end developer who really understands user experience and can fiddle with the back-end.
-        I'm both an extraordinarily tech savvy UX designer and a UI developer, depending on what the project requires.
-        I’m used to wearing many hats and getting stuff done, I have a solid understanding of product development cycle from design to testing and deployment.
-      </p>
+    <div className="about-page">
+      <div className="about-text-box">
+        <p>{text}</p>
+        <img src={windyPortrait} alt="Lena Venable" className="about-portrait" />
+        {skills && skills.length > 0 && (
+          <div className="about-skills-mobile">
+            <h2>Skills</h2>
+            <div className="skills-list">
+              {skills.map((skill, i) => <p key={i} className="skill">{skill}</p>)}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
+
+About.propTypes = {
+  text: PropTypes.string,
+  skills: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default About;

@@ -65,7 +65,7 @@ export const microsoft = {
 };
 
 export const captions = {
-    about: "I’m the front-end developer who really understands user experience and can fiddle with the back-end. I am also be an extraordinarily tech savvy UX designer or UI developer, depending on what the project requires. I’m used to wearing many hats and getting stuff done, I have a solid understanding of product development cycle from design to testing and deployment. ",
+    about: "I’m a designer, artist, educator, and web developer. I’m passionate about making technology approachable and usable. I own the full product cycle: from concept and design to testing and deployment.",
     atma: [{
         header: "Role: Designer and web developer",
         content: "Atma Connect is a community impact platform. I created a visually coherent design system across all screens and implemented it on their responsive website, easilymaintained through a CMS."

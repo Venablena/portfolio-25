@@ -121,6 +121,48 @@
   max-width: 1200px;
 }
 
+/* About page layout */
+.about-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-portrait {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text-box {
+  width: 30vw;
+  background-color: #609210;
+  padding: 2rem;
+  color: white;
+  box-sizing: border-box;
+}
+
+.about-text-box p,
+.about-text-box h2 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text-box {
+    width: 100%;
+  }
+}
+
 /* Skills block inside About — desktop: hidden; mobile: visible */
 .about-skills-mobile {
   display: none;
