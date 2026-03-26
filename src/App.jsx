@@ -75,13 +75,15 @@ function App() {
         skills={skills}
         isMobileNavOpen={isMobileNavOpen}
         onHamburgerToggle={() => setIsMobileNavOpen(open => !open)}
+        onAboutClick={() => handleNavSelect('About')}
+        isAboutActive={activeId === 'About'}
       />
       <div className="main-content">
         <nav className={`portfolio-navbar${isMobileNavOpen ? ' open' : ''}`}>
           {navItems.map(({ id, title }) => (
             <button
               key={id}
-              className={`nav-item ${activeId === id ? 'active' : ''}`}
+              className={`nav-item ${activeId === id ? 'active' : ''} ${id === 'About' ? 'about-nav-item' : ''}`}
               onClick={() => handleNavSelect(id)}
             >
               {title}

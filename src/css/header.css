@@ -31,6 +31,30 @@
   font-weight: 600;
 }
 
+/* About button in sidebar — desktop only */
+.sidebar-about-btn {
+  display: block;
+  margin-top: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-variant-caps: all-small-caps;
+  font-weight: 600;
+  color: #609210;
+  width: 100%;
+  text-align: center;
+  padding: 0.25rem 0;
+}
+
+.sidebar-about-btn:hover {
+  color: #88cd19;
+}
+
+.sidebar-about-btn.active {
+  font-weight: 700;
+}
+
 /* Hamburger button — hidden on desktop */
 .hamburger-btn {
   display: none;
@@ -95,8 +119,9 @@
     font-variant-caps: normal;
   }
 
-  /* Hide sidebar skills on mobile — they appear in About content instead */
-  .skills-sidebar {
+  /* Hide sidebar skills and About button on mobile */
+  .skills-sidebar,
+  .sidebar-about-btn {
     display: none;
   }
 

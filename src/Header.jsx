@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-function Header({ skills = [], isMobileNavOpen, onHamburgerToggle }) {
+function Header({ skills = [], isMobileNavOpen, onHamburgerToggle, onAboutClick, isAboutActive }) {
   return (
     <header className="app-header">
       <div className="app-header-inner">
@@ -13,6 +13,12 @@ function Header({ skills = [], isMobileNavOpen, onHamburgerToggle }) {
             ))}
           </div>
         )}
+        <button
+          className={`sidebar-about-btn${isAboutActive ? ' active' : ''}`}
+          onClick={onAboutClick}
+        >
+          About
+        </button>
       </div>
       <button
         className="hamburger-btn"
@@ -30,6 +36,8 @@ Header.propTypes = {
   skills: PropTypes.arrayOf(PropTypes.string),
   isMobileNavOpen: PropTypes.bool,
   onHamburgerToggle: PropTypes.func,
+  onAboutClick: PropTypes.func,
+  isAboutActive: PropTypes.bool,
 }
 
 export default Header
