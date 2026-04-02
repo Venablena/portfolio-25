@@ -19,6 +19,7 @@ function About({ text, ps, skills }) {
           <a href="mailto:venablena@gmail.com" aria-label="Email">
             <FaEnvelope />
           </a>
+          <a href="http://art.venablena.com" target="_blank" rel="noreferrer" className="about-art-mobile">ART</a>
         </div>
         {skills && skills.length > 0 && (
           <div className="about-skills-mobile">

@@ -44,11 +44,6 @@ function App() {
     { src: content.microsoft.report, alt: 'Microsoft Report Screenshot' },
   ];
 
-  const visualImages = [
-    { src: content.visual.fashion, alt: 'Fashion Visual Design' },
-    { src: content.visual.sfzc, alt: 'SFZC Visual Design' },
-    { src: content.visual.tech, alt: 'Tech Visual Design' },
-  ];
 
   const navItems = [
     { id: 'About', title: 'About', Component: () => <About text={captions.about} ps={captions.ps} skills={skills} /> },
@@ -58,10 +53,9 @@ function App() {
     { id: 'Element Science', title: 'Element Science', Component: () => <Page images={elementImages} captions={captions.element} isContinuous={true} /> },
     { id: 'Atma Connect', title: 'Atma Connect', Component: () => <Page images={atmaImages} captions={captions.atma} isContinuous={true} /> },
     { id: 'UX Research', title: 'UX Research', Component: () => <Page images={zenImages} captions={captions.zen} isContinuous={true}/> },
-    { id: 'visual', title: 'Visual Design', Component: () => <Page images={visualImages} captions={captions.visual} /> },
   ];
 
-  const [activeId, setActiveId] = useState(navItems[2].id);
+  const [activeId, setActiveId] = useState('Microsoft');
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const handleNavSelect = (id) => {

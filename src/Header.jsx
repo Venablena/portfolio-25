@@ -19,6 +19,14 @@ function Header({ skills = [], isMobileNavOpen, onHamburgerToggle, onAboutClick,
         >
           About
         </button>
+        <a
+          href="http://art.venablena.com"
+          target="_blank"
+          rel="noreferrer"
+          className="sidebar-art-link"
+        >
+          Art
+        </a>
       </div>
       <button
         className="hamburger-btn"

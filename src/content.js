@@ -1,7 +1,3 @@
-// Visual images
-import visualMH from './img/visual/MH-portfolio-WEB3.jpg';
-import visualSFZC from './img/visual/SFZC_print.jpg';
-import visualTech from './img/visual/Technical_illustration.jpg';
 // UI images
 import atmaCompo from './img/ui/atma/Atma_compo.jpg';
 import atmaProcess from './img/ui/atma/Atma_process.jpg';
@@ -13,7 +9,6 @@ import basisMediaPlayerMap from './img/ui/basis/media_player_map.jpg';
 import basisScreenTests from './img/ui/basis/screen_tests.jpg';
 import basisUsability from './img/ui/basis/usability.jpg';
 import basisWireframes from './img/ui/basis/wireframes.jpg';
-import basisWireframesHor from './img/ui/basis/wireframes_hor.jpg';
 // Element images
 import elementCompo from './img/ui/element/ES_compo.jpg';
 import elementProject from './img/ui/element/ES_project.jpg';
@@ -39,7 +34,6 @@ export const basis = {
     screenTests: basisScreenTests,
     usability: basisUsability,
     wireframes: basisWireframes,
-    wireframesHor: basisWireframesHor,
 };
 
 export const element = {
@@ -52,11 +46,6 @@ export const zen = {
     userMap: zen2,
 };
 
-export const visual = {
-    fashion: visualMH,
-    sfzc: visualSFZC,
-    tech: visualTech
-};
 
 export const microsoft = {
   dashBoard: msShot1,
@@ -113,7 +102,7 @@ export const captions = {
         header: "Keep it relevant",
         content: "I was part of the team designing a new generation wearable device and its companion mobile app. The entire app architecture was revised and new features developed based on competition analysis and customer feedback. In addition to feature development, I researched market trends and updated user documentation"
     }],
-    ps: "PS: I built this site from scratch using AI. Easy breezy.",
+    ps: "PS: I built this site from scratch using AI. Easy breezy. Want one? Hit me up!",
     zen: [{
         header: "Role: UX researcher and designer",
         content: "I planned and executed a usability study of the San Francisco Zen center website that had grown overly complex due to haphazardly added services across multiple content management platforms."

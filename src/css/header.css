@@ -32,6 +32,7 @@
 }
 
 /* About button in sidebar — desktop only */
+.sidebar-art-link,
 .sidebar-about-btn {
   display: block;
   margin-top: 1.5rem;
@@ -44,9 +45,9 @@
   color: #609210;
   width: 100%;
   text-align: center;
-  padding: 0.25rem 0;
 }
 
+.sidebar-art-link:hover,
 .sidebar-about-btn:hover {
   color: #88cd19;
 }
@@ -103,10 +104,6 @@
     box-sizing: border-box;
   }
 
-  .app-header-inner {
-    text-align: center;
-  }
-
   .app-header h1 {
     font-size: 1.1rem;
     margin-bottom: 0.15rem;
@@ -119,9 +116,10 @@
     font-variant-caps: normal;
   }
 
-  /* Hide sidebar skills and About button on mobile */
+  /* Hide sidebar skills, About button, and Art link on mobile */
   .skills-sidebar,
-  .sidebar-about-btn {
+  .sidebar-about-btn,
+  .sidebar-art-link {
     display: none;
   }
 
